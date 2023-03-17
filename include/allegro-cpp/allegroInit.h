@@ -14,7 +14,7 @@ struct AllegroInitResult {
 	std::string errorMesage;
 };
 
-AllegroInitResult init_allegro();
+AllegroInitResult initializeAllegroModules();
 
 }
 // namespace allegrocpp

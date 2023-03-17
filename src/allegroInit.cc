@@ -29,7 +29,7 @@ void configureResourcesPath() {
 
 } // namespace
 
-AllegroInitResult init_allegro() {
+AllegroInitResult initializeAllegroModules() {
 	if (!al_init()) {
 		return failedResult("Failed to initialize allegro");
 	}
