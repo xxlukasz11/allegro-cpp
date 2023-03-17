@@ -13,13 +13,36 @@ static const std::unordered_map<ALLEGRO_EVENT_TYPE, EventType> eventTypeMapping 
 };
 
 static const std::unordered_map<int, KeyboardKey> keyboardMapping{
-		{ ALLEGRO_KEY_DOWN, KeyboardKey::KEY_DOWN },
-		{ ALLEGRO_KEY_UP, KeyboardKey::KEY_UP },
-		{ ALLEGRO_KEY_LEFT, KeyboardKey::KEY_LEFT },
-		{ ALLEGRO_KEY_RIGHT, KeyboardKey::KEY_RIGHT },
-		{ ALLEGRO_KEY_ESCAPE, KeyboardKey::KEY_ESCAPE },
-		{ ALLEGRO_KEY_Y, KeyboardKey::KEY_Y },
-		{ ALLEGRO_KEY_N, KeyboardKey::KEY_N }
+		{ ALLEGRO_KEY_DOWN, KeyboardKey::DOWN },
+		{ ALLEGRO_KEY_UP, KeyboardKey::UP },
+		{ ALLEGRO_KEY_LEFT, KeyboardKey::LEFT },
+		{ ALLEGRO_KEY_RIGHT, KeyboardKey::RIGHT },
+		{ ALLEGRO_KEY_ESCAPE, KeyboardKey::ESCAPE },
+		{ ALLEGRO_KEY_A, KeyboardKey::A },
+		{ ALLEGRO_KEY_B, KeyboardKey::B },
+		{ ALLEGRO_KEY_C, KeyboardKey::C },
+		{ ALLEGRO_KEY_D, KeyboardKey::D },
+		{ ALLEGRO_KEY_E, KeyboardKey::E },
+		{ ALLEGRO_KEY_F, KeyboardKey::F },
+		{ ALLEGRO_KEY_G, KeyboardKey::G },
+		{ ALLEGRO_KEY_H, KeyboardKey::H },
+		{ ALLEGRO_KEY_I, KeyboardKey::I },
+		{ ALLEGRO_KEY_J, KeyboardKey::J },
+		{ ALLEGRO_KEY_K, KeyboardKey::K },
+		{ ALLEGRO_KEY_L, KeyboardKey::L },
+		{ ALLEGRO_KEY_M, KeyboardKey::M },
+		{ ALLEGRO_KEY_N, KeyboardKey::N },
+		{ ALLEGRO_KEY_O, KeyboardKey::O },
+		{ ALLEGRO_KEY_P, KeyboardKey::P },
+		{ ALLEGRO_KEY_R, KeyboardKey::R },
+		{ ALLEGRO_KEY_S, KeyboardKey::S },
+		{ ALLEGRO_KEY_T, KeyboardKey::T },
+		{ ALLEGRO_KEY_U, KeyboardKey::U },
+		{ ALLEGRO_KEY_V, KeyboardKey::V },
+		{ ALLEGRO_KEY_W, KeyboardKey::W },
+		{ ALLEGRO_KEY_X, KeyboardKey::X },
+		{ ALLEGRO_KEY_Y, KeyboardKey::Y },
+		{ ALLEGRO_KEY_Z, KeyboardKey::Z },
 };
 // @formatter:on
 

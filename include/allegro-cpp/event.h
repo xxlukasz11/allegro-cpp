@@ -6,7 +6,7 @@
 namespace allegrocpp {
 
 enum class KeyboardKey {
-	KEY_UP, KEY_LEFT, KEY_RIGHT, KEY_DOWN, KEY_ESCAPE, KEY_Y, KEY_N, UNKNOWN
+	UP, LEFT, RIGHT, DOWN, ESCAPE, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, R, S, T, U, V, W, X, Y, Z, UNKNOWN
 };
 
 enum class EventType {
