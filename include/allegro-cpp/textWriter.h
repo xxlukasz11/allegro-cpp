@@ -2,6 +2,7 @@
 #define SRC_TEXTWRITER_H_
 
 #include <string>
+#include "vec.h"
 
 namespace allegrocpp {
 
@@ -11,7 +12,12 @@ class Font;
 class TextWriter {
 public:
 	TextWriter(const Display& display, const Font& font);
+
 	void writeCenter(const std::string& text);
+
+	template<typename T>
+	void writeCenterAt(const Vec<T>& center, const std::string& text);
+
 	void writeCenterAtLine(int lineIndex, const std::string& text);
 
 private:
@@ -20,6 +26,11 @@ private:
 	const Display& display;
 	const Font& font;
 };
+
+template<typename T>
+void TextWriter::writeCenterAt(const Vec<T>& center, const std::string& text) {
+	write(center.x, center.y, text);
+}
 
 } // namespace allegrocpp
 
