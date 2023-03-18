@@ -1,6 +1,7 @@
 #ifndef SRC_TEXTWRITER_H_
 #define SRC_TEXTWRITER_H_
 
+#include <allegro5/allegro_color.h>
 #include <string>
 #include "vec.h"
 
@@ -8,10 +9,11 @@ namespace allegrocpp {
 
 class Display;
 class Font;
+class Color;
 
 class TextWriter {
 public:
-	TextWriter(const Display& display, const Font& font);
+	TextWriter(const Display& display, const Font& font, const Color& textColor);
 
 	void writeCenter(const std::string& text);
 
@@ -25,6 +27,7 @@ private:
 
 	const Display& display;
 	const Font& font;
+	ALLEGRO_COLOR textColor;
 };
 
 template<typename T>
