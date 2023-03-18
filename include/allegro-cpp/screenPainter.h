@@ -10,6 +10,7 @@ namespace allegrocpp {
 class Color;
 
 class ScreenPainter {
+public:
 	template<typename T, typename V>
 	void drawFilledRectangle(const Vec<T>& topLeft, const Vec<T>& bottomRight, const Color& fillColor) const;
 
