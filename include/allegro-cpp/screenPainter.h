@@ -12,10 +12,10 @@ class Color;
 class ScreenPainter {
 public:
 	template<typename T, typename V>
-	void drawFilledRectangle(const Vec<T>& topLeft, const Vec<T>& bottomRight, const Color& fillColor) const;
+	void drawFilledRectangle(const Vec<T>& topLeft, const Vec<V>& bottomRight, const Color& fillColor) const;
 
-	template<typename T, typename V>
-	void drawFilledRoundedRectangle(const Vec<T>& topLeft, const Vec<T>& bottomRight, const Vec<T>& cornerRadius,
+	template<typename T, typename V, typename U>
+	void drawFilledRoundedRectangle(const Vec<T>& topLeft, const Vec<V>& bottomRight, const Vec<U>& cornerRadius,
 			const Color& fillColor) const;
 
 	template<typename T>
@@ -36,14 +36,14 @@ private:
 };
 
 template<typename T, typename V>
-void ScreenPainter::drawFilledRectangle(const Vec<T>& topLeft, const Vec<T>& bottomRight,
+void ScreenPainter::drawFilledRectangle(const Vec<T>& topLeft, const Vec<V>& bottomRight,
 		const Color& fillColor) const {
 	rawPainter.drawFilledRectangle(topLeft.x, topLeft.y, bottomRight.x, bottomRight.y, fillColor);
 }
 
-template<typename T, typename V>
-void ScreenPainter::drawFilledRoundedRectangle(const Vec<T>& topLeft, const Vec<T>& bottomRight,
-		const Vec<T>& cornerRadius, const Color& fillColor) const {
+template<typename T, typename V, typename U>
+void ScreenPainter::drawFilledRoundedRectangle(const Vec<T>& topLeft, const Vec<V>& bottomRight,
+		const Vec<U>& cornerRadius, const Color& fillColor) const {
 	rawPainter.drawFilledRoundedRectangle(topLeft.x, topLeft.y, bottomRight.x, bottomRight.y, cornerRadius.x,
 			cornerRadius.y, fillColor);
 }
