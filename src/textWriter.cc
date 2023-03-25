@@ -14,7 +14,8 @@ namespace allegrocpp {
 TextWriter::TextWriter(const Display& display, const Font& font, const Color& textColor) :
 		display(display),
 		font(font),
-		textColor(al_map_rgb(textColor.r(), textColor.g(), textColor.b())) {
+		textColor(al_map_rgb(textColor.r(), textColor.g(), textColor.b())),
+		verticalTextOffset(font.getFontSize() / 2.0f) {
 }
 
 void TextWriter::writeCenter(const std::string& text) {
@@ -27,7 +28,7 @@ void TextWriter::writeCenterAtLine(int lineIndex, const std::string& text) {
 }
 
 void TextWriter::write(int x, int y, const std::string& text) {
-	al_draw_text(font.getAllegroFontPtr(), textColor, x, y, ALLEGRO_ALIGN_CENTRE, text.c_str());
+	al_draw_text(font.getAllegroFontPtr(), textColor, x, y - verticalTextOffset, ALLEGRO_ALIGN_CENTRE, text.c_str());
 }
 
 } // namespace allegrocpp

@@ -9,17 +9,19 @@ namespace allegrocpp {
 
 class Font {
 public:
-	ALLEGRO_FONT* getAllegroFontPtr() const;
 	static std::unique_ptr<Font> loadFromTtfFile(const char* filename, int fontSize);
+	int getFontSize() const;
+	ALLEGRO_FONT* getAllegroFontPtr() const;
 
 private:
 	using AllegroFontDeleter = void(*)(ALLEGRO_FONT*);
 	using AllegroFontPtr = std::unique_ptr<ALLEGRO_FONT, AllegroFontDeleter>;
 
-	Font(AllegroFontPtr fontPtr);
+	Font(AllegroFontPtr fontPtr, int fontSize);
 	static void destroyFont(ALLEGRO_FONT* font);
 
 	AllegroFontPtr allegroFont;
+	int fontSize;
 };
 
 } // namespace allegrocpp

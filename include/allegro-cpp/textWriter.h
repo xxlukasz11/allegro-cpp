@@ -28,6 +28,7 @@ private:
 	const Display& display;
 	const Font& font;
 	ALLEGRO_COLOR textColor;
+	float verticalTextOffset;
 };
 
 template<typename T>
