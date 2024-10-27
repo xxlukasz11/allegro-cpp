@@ -1,0 +1,17 @@
+allegrocpp_lib = library('allegrocpp',
+    sources: [
+        'allegroInit.cc',
+        'color.cc',
+        'event.cc',
+        'font.cc',
+        'rawScreenPainter.cc',
+        'textWriter.cc',
+        'audioSample.cc',
+        'display.cc',
+        'eventQueue.cc',
+        'screenPainter.cc',
+        'timer.cc',
+    ],
+    include_directories: allegrocpp_private_includes,
+    dependencies: allegro_dep,
+)
